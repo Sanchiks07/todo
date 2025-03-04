@@ -11,9 +11,6 @@
         <ul>
             <li><a href="/apple">Apple Home</a></li>
             <li><a href="/store">Store</a></li>
-            <li><a href="/mac">Mac</a></li>
-            <li><a href="/iphone">iPhone</a></li>
-            <li><a href="/watch">Watch</a></li>
             <li><a href="/airpods">AirPods</a></li>
             <li><a href="/support">Support</a></li>
         </ul>

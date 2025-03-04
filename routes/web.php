@@ -18,18 +18,6 @@ Route::get('/store', function () {
     return view('store');
 });
 
-Route::get('/mac', function () {
-    return view('mac');
-});
-
-Route::get('/iphone', function () {
-    return view('iphone');
-});
-
-Route::get('/watch', function () {
-    return view('watch');
-});
-
 Route::get('/airpods', function () {
     return view('airpods');
 });
@@ -37,3 +25,5 @@ Route::get('/airpods', function () {
 Route::get('/support', function () {
     return view('support');
 });
+
+Route::get('/todos', [ToDoController::class, 'index']);
