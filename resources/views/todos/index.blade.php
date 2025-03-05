@@ -6,10 +6,11 @@
     <title>Veicamie uzdevumi</title>
 </head>
 <body>
+    <x-navigation></x-navigation>
     <h1>Visi veicamie uzdevumi</h1>
     <ul>
         @foreach ($todos as $todo)
-            <li>{{ $todo->content }}</li>
+            <li><a href="/todos/{{ $todo->id }}">{{ $todo->content }}</a></li>
         @endforeach
     </ul>
 </body>

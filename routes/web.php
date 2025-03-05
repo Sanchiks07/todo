@@ -30,3 +30,5 @@ Route::get('/support', function () {
 
 Route::get('/todos', [ToDoController::class, 'index']);
 Route::get('/diaries', [DiaryController::class, 'index']);
+
+Route::get('/todos/{todo}', [ToDoController::class, 'show']);
