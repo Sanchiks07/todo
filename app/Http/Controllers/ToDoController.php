@@ -16,4 +16,12 @@ class ToDoController extends Controller
     public function show(ToDo $todo) {
         return view("todos.show", compact("todo"));
     }
+
+    public function create(ToDo $todo) {
+        return view("todos.create", compact("todo"));
+    }
+
+    public function store(ToDo $todo) {
+        dd("Metode store izsaukta");
+    }
 }
