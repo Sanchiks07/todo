@@ -1,10 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-
 use App\Models\ToDo;
+use Illuminate\Http\Request;
 
 class ToDoController extends Controller
 {
@@ -21,7 +20,11 @@ class ToDoController extends Controller
         return view("todos.create", compact("todo"));
     }
 
-    public function store(ToDo $todo) {
+    public function store(Request $request) {
+        ToDo::create([
+            "content" => $request->content,
+            "completed" => false
+        ]);
         dd("Metode store izsaukta");
     }
 }
