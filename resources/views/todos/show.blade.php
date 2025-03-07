@@ -4,4 +4,6 @@
     </x-slot:title>
     <h1>{{ $todo->content }}</h1>
     <p>Izpildīts: {{ $todo->completed ? "Jā" : "Nē" }}</p>
+
+    <button onclick="window.location.href='/todos/{{ $todo->id }}/edit'">Rediģēt</button>
 </x-layout>

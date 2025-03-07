@@ -23,7 +23,7 @@ class DiaryController extends Controller
         $validated = $request->validate([
             "title" => ["required", "max:255"],
             "body" => ["required", "max:100"],
-            "date" => ["required"]
+            "date" => ["required", "date"]
         ]);
         Diary::create([
             "title" => $validated["title"],

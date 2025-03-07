@@ -29,4 +29,12 @@ class ToDoController extends Controller
         ]);
         return redirect("/todos");
     }
+
+    public function edit(ToDo $todo) {
+        return view("todos.edit", compact("todo"));
+    }
+
+    public function update(Request $request) {
+        dd($request->content);
+    }
 }
