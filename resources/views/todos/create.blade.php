@@ -5,7 +5,10 @@
     <h1>Izveidot uzdevumu</h1>
     <form method="POST" action="/todos">
         @csrf
-        <input name="content" />
-        <button>Saglabāt</button>
+        <input name="content" /><br>
+        @error("content")
+            <p>{{ $message }}</p>
+        @enderror
+        <br><button>Saglabāt</button>
     </form>
 </x-layout>

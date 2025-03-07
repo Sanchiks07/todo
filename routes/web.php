@@ -12,27 +12,27 @@ Route::get('/why', function () {
     return view('why');
 });
 
+// apple store
 Route::get('/apple', function () {
     return view('apple');
 });
-
 Route::get('/store', function () {
     return view('store');
 });
-
 Route::get('/airpods', function () {
     return view('airpods');
 });
-
 Route::get('/support', function () {
     return view('support');
 });
 
+// todo
 Route::get('/todos', [ToDoController::class, 'index']);
 Route::get('/todos/create', [ToDoController::class, 'create']);
 Route::get('/todos/{todo}', [ToDoController::class, 'show']);
 Route::post('/todos', [ToDoController::class, 'store']);
 
+// diary
 Route::get('/diaries', [DiaryController::class, 'index']);
 Route::get('/diaries/create', [DiaryController::class, 'create']);
 Route::get('/diaries/{diary}', [DiaryController::class, 'show']);
