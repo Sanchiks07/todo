@@ -2,8 +2,7 @@
     <x-slot:title>
         Welcome
     </x-slot:title>
+    <div class="container">
         <h1>Heloings, Laravel!</h1>
-        <ul>
-            <li><a href="/apple">Apple Store</a></li>
-        </ul>
+    </div>
 </x-layout>
