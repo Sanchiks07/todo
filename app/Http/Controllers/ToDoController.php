@@ -46,4 +46,9 @@ class ToDoController extends Controller
 
         return redirect("/todos");
     }
+
+    public function destroy(ToDo $todo) {
+        $todo->delete();
+        return redirect("/todos");
+    }
 }

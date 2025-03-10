@@ -8,5 +8,11 @@
         <p>{{ $diary->date }}</p>
 
         <a class="edit" href="/diaries/{{ $diary->id }}/edit">Rediģēt</a>
+
+        <form method="POST" action="{{ $diary->id }}">
+            @csrf
+            @method("delete")
+            <button>Dzēst</button>
+        </form>
     </div>
 </x-layout>
