@@ -31,10 +31,11 @@ class ToDoController extends Controller
     }
 
     public function edit(ToDo $todo) {
+        $todos = ToDo::all();
         return view("todos.edit", compact("todo"));
     }
 
-    public function update(Request $request) {
+    public function update(Request $request, ToDo $todo) {
         $validated = $request->validate([
             "content" => ["required", "max:255"],
             "completed" => ["boolean"]
@@ -44,6 +45,6 @@ class ToDoController extends Controller
         $todo->completed = $validated["completed"];
         $todo->save();
 
-        return redirect("/todos");
+        return redirect("/todos/{{ $todo->id }}");
     }
 }

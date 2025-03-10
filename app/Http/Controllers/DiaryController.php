@@ -21,8 +21,8 @@ class DiaryController extends Controller
 
     public function store(Request $request) {
         $validated = $request->validate([
-            "title" => ["required", "max:255"],
-            "body" => ["required", "max:100"],
+            "title" => ["required", "max:100"],
+            "body" => ["required", "max:255"],
             "date" => ["required", "date"]
         ]);
         Diary::create([
@@ -31,5 +31,25 @@ class DiaryController extends Controller
             "date" => $validated["date"]
         ]);
         return redirect("/diaries");
+    }
+
+    public function edit(Diary $diary) {
+        $diaries = Diary::all();
+        return view("diaries.edit", compact("diary"));
+    }
+
+    public function update(Request $request, Diary $diary) {
+        $validated = $request->validate([
+            "title" => ["required", "max:100"],
+            "body" => ["required", "max:255"],
+            "date" => ["required", "date"]
+        ]);
+
+        $diary->title = $validated["title"];
+        $diary->body = $validated["body"];
+        $diary->date = $validated["date"];
+        $diary->save();
+
+        return redirect("/diaries/{{ $diary->id }}");
     }
 }

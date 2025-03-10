@@ -10,20 +10,22 @@
                 Ttile:<br><input name="title" />
             </label><br><br>
 
+            @error("title")
+                <p>{{ $message }}</p>
+            @enderror
+
             <label>
                 Body:<br><textarea name="body" rows="5" cols="30"></textarea>
             </label><br><br>
 
-            <label>
-                Date:<br><input type="date" name="date" />
-            </label><br>
-
-            @error("title")
-                <p>{{ $message }}</p>
-            @enderror
             @error("body")
                 <p>{{ $message }}</p>
             @enderror
+
+            <label>
+                Date:<br><input type="date" name="date" />
+            </label><br>
+            
             @error("date")
                 <p>{{ $message }}</p>
             @enderror

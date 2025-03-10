@@ -1,6 +1,6 @@
 <x-layout>
     <x-slot:title>
-        Rediģē uzdevumu
+        Rediģēt uzdevumu
     </x-slot:title>
     <div class="container">
         <h1>Rediģēt uzdevumu: "{{ $todo->content }}"</h1>
@@ -9,6 +9,7 @@
             @method('PUT')
             
             <label>
+                Content:<br>
                 <input name="content" value="{{ $todo->content }}" />
             </label>
 
@@ -18,7 +19,7 @@
 
             <label>
                 Izpildīts:
-                <input name="completed" type="hidden" value="{{ $todo->completed }}">
+                <input name="completed" type="hidden" value="{{ old('completed', $todo->completed) ? 'checked' : '' }}">
                 <input name="completed" type="checkbox" value="1" {{ $todo->completed ? 'checked' : '' }}>   
             </label>
             
