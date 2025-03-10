@@ -9,7 +9,7 @@
 
         <a class="edit" href="/diaries/{{ $diary->id }}/edit">Rediģēt</a>
 
-        <form method="POST" action="{{ $diary->id }}">
+        <form method="POST" action="/diaries/{{ $diary->id }}">
             @csrf
             @method("delete")
             <button>Dzēst</button>
