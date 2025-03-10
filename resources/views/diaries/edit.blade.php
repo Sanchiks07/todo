@@ -10,7 +10,7 @@
             
             <label>
                 Title:<br>
-                <input name="content" value="{{ $diary->title }}" />
+                <input name="title" value="{{ $diary->title }}" />
             </label>
 
             @error("title")

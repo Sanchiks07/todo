@@ -50,6 +50,6 @@ class DiaryController extends Controller
         $diary->date = $validated["date"];
         $diary->save();
 
-        return redirect("/diaries/{{ $diary->id }}");
+        return redirect("/diaries");
     }
 }

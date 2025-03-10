@@ -45,6 +45,6 @@ class ToDoController extends Controller
         $todo->completed = $validated["completed"];
         $todo->save();
 
-        return redirect("/todos/{{ $todo->id }}");
+        return redirect("/todos");
     }
 }
