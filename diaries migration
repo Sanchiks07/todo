@@ -1,0 +1,10 @@
+USE diary;
+
+INSERT INTO diaries
+(title, body, date)
+VALUES
+("Vroom", "Row row row your boat...", "2025-04-03"),
+("Laravel is the best", "viss nāk un aiziet tālumaaaaa", "2025-04-03"),
+("Help", "Just dance!", "2025-04-03");
+
+SELECT * FROM diaries;

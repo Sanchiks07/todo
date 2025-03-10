@@ -25,6 +25,7 @@ ul {
     padding: 0;
 }
 
+/* links - izvads, edit, delete */
 a {
     text-decoration: none;
     color: #a433c0;
@@ -33,6 +34,26 @@ a {
 
 a:hover {
     color: #c745e7;
+}
+
+.edit {
+    color: #1a7e1a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.edit:hover {
+    color: #1ab11a;
+}
+
+.delete {
+    color: #a50000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.delete:hover {
+    color: #db1919;
 }
 
 /* navbar */

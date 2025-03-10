@@ -7,6 +7,6 @@
         <p>{{ $diary->body }}</p>
         <p>{{ $diary->date }}</p>
 
-        <button onclick="window.location.href='/diaries/{{ $diary->id }}/edit'">Rediģēt</button>
+        <a class="edit" href="/diaries/{{ $diary->id }}/edit">Rediģēt</a>
     </div>
 </x-layout>

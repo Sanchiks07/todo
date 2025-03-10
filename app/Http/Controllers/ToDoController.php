@@ -31,7 +31,6 @@ class ToDoController extends Controller
     }
 
     public function edit(ToDo $todo) {
-        $todos = ToDo::all();
         return view("todos.edit", compact("todo"));
     }
 

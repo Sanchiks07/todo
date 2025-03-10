@@ -34,7 +34,6 @@ class DiaryController extends Controller
     }
 
     public function edit(Diary $diary) {
-        $diaries = Diary::all();
         return view("diaries.edit", compact("diary"));
     }
 
