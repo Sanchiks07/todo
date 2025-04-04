@@ -208,11 +208,16 @@ nav form {
 }
 
 /* edit & delete, register & login actions */
-.actions {
+.actions, .user { /* user - augšā pie navbar kopā ar logout */
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
+}
+
+.user {
+    height: 40px;
+    width: auto;
 }
 
 /* input & textarea fields */

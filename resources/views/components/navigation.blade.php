@@ -9,8 +9,11 @@
         <form method="POST" action="/logout">
             @csrf
             @method("DELETE")
-            <li><button class="logout">Logout</button></li>
-        </form> 
+            <div class="user">
+                <p>Sveiks, {{ Auth::user()->first_name}}</p>
+                <li><button class="logout">Logout</button></li>
+            </div>
+        </form>
         @endauth
 
         @guest
