@@ -7,18 +7,12 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionController;
 
 Route::get('/', function () {
-    if (Auth::check()) {
-        return redirect('/todos');
-    }
     return view('welcome');
-});
+})->middleware("guest");
 
 Route::get('/why', function () {
-    if (Auth::check()) {
-        return redirect('/todos');
-    }
     return view('why');
-});
+})->middleware("guest");
 
 // todo
 Route::get('/todos', [ToDoController::class, 'index'])->middleware("auth");

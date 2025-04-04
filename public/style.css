@@ -10,9 +10,13 @@
     --edit-background: #2e9d15;
     --edit-hover: #3dbe20;
 
-    --delete-color: #ff8888;
+    --delete-color: #ffc2c2;
     --delete-background: #cf0d0d;
     --delete-hover: #eb1818;
+
+    --button-color: #eea2ff;
+    --button-background: #9313b0;
+    --button-hover: #ac1acd;
 }
 
 ul {
@@ -43,7 +47,7 @@ body {
     max-width: 100vw;
 }
 
-/* navbar */
+/* navbar + logout poga */
 nav {
     font-size: 18px;
     width: 100%;
@@ -68,6 +72,37 @@ nav a:hover {
 
 nav li {
     display: inline;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav form {
+    margin-left: 25px;
+    padding-left: 30px;
+    border-left: 2px solid black;
+}
+
+.logout {
+    all: unset;
+    color: var(--button-color);
+    background-color: var(--button-background);
+    font-size: 15px;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.logout:hover {
+    background-color: var(--button-hover);
 }
 
 /* todos & diaries datu izvads no DB */
@@ -100,7 +135,7 @@ nav li {
     color: var(--link-hover);
 }
 
-/* edit & delete pogas */
+/* edit & delete & save pogas */
 .edit {
     display: inline-block;
     padding: 6px 10px;
@@ -130,10 +165,24 @@ nav li {
 
 .delete:hover {
     background-color: var(--delete-hover);
-    
 }
 
-/* edit & delete actions */
+.save {
+    all: unset;
+    background-color: var(--button-background);
+    color: var(--button-color);
+    padding : 6px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.save:hover {
+    background-color: var(--button-hover);
+}
+
+/* edit & delete, register & login actions */
 .actions {
     display: flex;
     justify-content: center;

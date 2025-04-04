@@ -27,7 +27,7 @@
             <p>{{ $message }}</p>
             @enderror<br>
 
-            <br><button>Saglabāt</button>
+            <br><button class="save">Saglabāt</button>
         </form>
     </div>
 </x-layout>
