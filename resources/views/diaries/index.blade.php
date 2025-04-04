@@ -6,7 +6,7 @@
         <h1>Dienasgrāmatas ieraksti</h1>
         <ul>
         @foreach ($diaries as $diary)
-            <li><a href="/diaries/{{ $diary->id }}">{{ $diary->title }}</a></li>
+            <li><a href="/diaries/{{ $diary->id }}" class="output">{{ $diary->title }}</a></li>
         @endforeach
         </ul>
     </div>

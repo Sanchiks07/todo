@@ -1,5 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --background: #f2b6ff;
+
+    --link: #653970;
+    --link-hover: #482654;
+
+    --edit-color: #8aff67;
+    --edit-background: #2e9d15;
+    --edit-hover: #3dbe20;
+
+    --delete-color: #ff8888;
+    --delete-background: #cf0d0d;
+    --delete-hover: #eb1818;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    font-size: 17px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--background);
+    font-family: 'Poppins', sans-serif;
 }
 
 .container {
@@ -7,81 +37,106 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    flex: 1;
     text-align: center;
-    position: absolute;
     width: 100%;
-    max-width: 2500px;
-    height: auto;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-h1 {
-    color: #6d1085;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-/* links - izvads, edit, delete */
-a {
-    text-decoration: none;
-    color: #a433c0;
-    font-weight: bold;
-}
-
-a:hover {
-    color: #c745e7;
-}
-
-.edit {
-    color: #1a7e1a;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.edit:hover {
-    color: #1ab11a;
-}
-
-.delete {
-    color: #a50000;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.delete:hover {
-    color: #db1919;
+    max-width: 100vw;
 }
 
 /* navbar */
 nav {
+    font-size: 18px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    padding: 10px 0;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
+nav a:link, nav a:visited {
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px;
+    color: var(--link);
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: var(--link-hover);
 }
 
 nav li {
     display: inline;
 }
 
-nav a {
+/* todos & diaries datu izvads no DB */
+.h1-td {
+    margin: 0;
+}
+
+.p-td {
+    margin-bottom: 3%;
+}
+
+.p-d {
+    margin-bottom: 1%;
+}
+
+/* todos & diaries izvadu linki */
+.output {
+    font-size: 18px;
+}
+
+.output:link, .output:visited {
     text-decoration: none;
-    color: #0030cf;
     font-weight: bold;
+    margin: 0 15px;
+    color: var(--link);
 }
 
-nav li a {
-    padding: 8px;
+.output:hover {
+    text-decoration: underline;
+    color: var(--link-hover);
 }
 
-nav a:hover {
-    color: #3183ff;
+/* edit & delete pogas */
+.edit {
+    display: inline-block;
+    padding: 6px 10px;
+    background-color: var(--edit-background);
+    color: var(--edit-color);
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.edit:hover {
+    background-color: var(--edit-hover);
+}
+
+.delete {
+    all: unset;
+    background-color: var(--delete-background);
+    color: var(--delete-color);
+    padding : 6px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.delete:hover {
+    background-color: var(--delete-hover);
+    
+}
+
+/* edit & delete actions */
+.actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
