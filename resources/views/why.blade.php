@@ -1,8 +1,8 @@
 <x-layout>
     <x-slot:title>
-        Whyyy
+        Why
     </x-slot:title>
-    <div class="container">
+    <div class="why-container">
         <h1>Mūsdienu straujajā dzīves ritmā efektīva laika plānošana un uzdevumu pārvaldība ir kļuvusi par būtisku ikdienas sastāvdaļu. Darāmo darbu saraksta vietne piedāvā strukturētu pieeju, kas palīdz lietotājiem organizēt savus pienākumus un sasniegt mērķus.</h1>
         <p><strong>Kāpēc darāmo darbu saraksts ir nepieciešams ikvienam?</strong></p>
         <ol>
