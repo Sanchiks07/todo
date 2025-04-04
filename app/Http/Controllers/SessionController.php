@@ -28,9 +28,9 @@ class SessionController extends Controller
             throw ValidationException::withMessages([
                 "email" => "Nepareizs e-pasts vai parole"
             ]);
-        } else {
-            $request->session()->regenerate();
-            return redirect("/todos");
         }
+        
+        $request->session()->regenerate();
+        return redirect("/todos");
     }
 }
