@@ -2,6 +2,7 @@
 
 :root {
     --background: #f2b6ff;
+    --navbar-background: #ec98ff;
 
     --link: #653970;
     --link-hover: #482654;
@@ -14,9 +15,13 @@
     --delete-background: #cf0d0d;
     --delete-hover: #eb1818;
 
-    --button-color: #eea2ff;
+    --button-color: #f8c7ff;
     --button-background: #9313b0;
     --button-hover: #ac1acd;
+
+    --input-color: #691e7f;
+    --input-background: #bf38e137;
+    --input-border: #430854;
 }
 
 ul {
@@ -108,7 +113,7 @@ nav form {
     border-left: 2px solid black;
 }
 
-.logout {
+.logout, .login, .register {
     all: unset;
     color: var(--button-color);
     background-color: var(--button-background);
@@ -121,7 +126,7 @@ nav form {
     transition: background 0.3s ease-in-out;
 }
 
-.logout:hover {
+.logout:hover, .login:hover, .register:hover {
     background-color: var(--button-hover);
 }
 
@@ -210,4 +215,39 @@ nav form {
     gap: 10px;
 }
 
-/* input fields */
+/* input & textarea fields */
+input {
+    color: var(--input-color);
+    background-color: var(--input-background);
+    padding: 5px;
+    font-size: 16px;
+    border: 2px solid;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input:focus {
+    border-color: var(--input-border);
+    box-shadow: 0 0 6px rgba(129, 0, 180, 0.5);
+}
+
+textarea {
+    color: var(--input-color);
+    background-color: var(--input-background);
+    padding: 5px;
+    font-size: 16px;
+    border: 2px solid;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+textarea:focus {
+    border-color: var(--input-border);
+    box-shadow: 0 0 6px rgba(129, 0, 180, 0.5);
+}
+
+label {
+    font-weight: bold;
+}

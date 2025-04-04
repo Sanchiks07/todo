@@ -40,7 +40,7 @@
             <input name="password_confirmation" type="password" required/>
         </label><br><br>
 
-        <button type="submit">Register</button>
+        <button type="submit" class="register">Register</button>
     </form>
     </div>
 </x-layout>
