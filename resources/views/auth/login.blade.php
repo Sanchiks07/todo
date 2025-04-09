@@ -13,7 +13,7 @@
                         <li>{{ $error }}</li>
                     @endforeach
                 </ul>
-            @endif
+            @endif<br>
 
             <label>
                 Email<br>

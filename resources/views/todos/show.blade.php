@@ -7,7 +7,7 @@
         <p class="p-td">Izpildīts: {{ $todo->completed ? "Jā" : "Nē" }}</p>
 
         <div class="actions">
-            <a class="edit" href="/todos/{{ $todo->id }}/edit">Rediģēt</a><br>
+            <a class="edit" href="/todos/{{ $todo->id }}/edit">Rediģēt</a>
 
             <form method="POST" action="/todos/{{ $todo->id }}">
                 @csrf
